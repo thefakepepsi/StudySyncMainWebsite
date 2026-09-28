@@ -48,6 +48,19 @@ footer{padding:24px 20px;text-align:center;font-size:.85rem;background:var(--bg)
 .modal .btn.pri{background:#111;color:#fff}
 .modal .btn:disabled{opacity:.4;cursor:not-allowed}
 :focus-visible{outline:3px solid currentColor;outline-offset:2px}
+
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+.member{border-top:2px solid currentColor;padding-top:12px}
+.member h3{margin:0 0 6px;font-size:1.05rem}
+.member p{font-size:.92rem;opacity:.85;margin:0}
+section p.lead{margin-bottom:0}
+.hsets{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:28px}
+.hset{border:2px solid currentColor;border-radius:14px;padding:22px}
+.hset h3{margin:0 0 10px;font-size:1.15rem}
+.hset p{font-size:.92rem;opacity:.85;max-width:none}
+.hprice{margin-top:14px;padding-top:12px;border-top:1px solid color-mix(in srgb,currentColor 35%,transparent);font-weight:700;font-size:1.1rem}
+.hprice span{display:block;font-weight:400;opacity:.75;font-size:.85rem;margin-top:2px}
+.hprice small{display:block;font-weight:400;opacity:.65;font-size:.75rem;margin-top:4px}
 </style>
 </head>
 <body>
@@ -68,12 +81,32 @@ footer{padding:24px 20px;text-align:center;font-size:.85rem;background:var(--bg)
 </header>
 
 <main>
-<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
-<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
+<section><div class="in"><h2>Our Mission</h2>
+<p>We, EduPulse, developed StudySync as a way to solve two major problems. Firstly, in private schools and many universities where device usage is a key part of the learning ecosystem, AI is often misused and often serves a purpose in cheating on assignments, unfair means during testing, etc. Secondly, people who live in low-income households often do not have proper access to education, giving people who are financially fortunate an advantage in succeeding academically over those who are not financially fortunate. We want to close this gap between children of low-income households and children of high-income households.</p>
+</div></section>
+
+<section><div class="in"><h2>Meet the Team</h2>
+<div class="team">
+<div class="member"><h3>Eashan Falnikar</h3><p>Founder. Responsible for making the main AI chatbot on Creao AI, the VR headset, and coming up with the idea.</p></div>
+<div class="member"><h3>Vivaan Agrawal</h3><p>Responsible for the creation of our VR environments, the financial breakdown of our digital services, and the creation of multiple versions of VR headsets.</p></div>
+<div class="member"><h3>Madhav Hissaria</h3><p>Responsible for the idea of features such as the Career Counselor and Study Planner. Developer of the main StudySync website, the VR Hub, the Career Counselor website, and the Ledger Study Planner.</p></div>
+<div class="member"><h3>Vehan Markandeya</h3><p>Responsible for the process journal, the empathizing stage, the HMW worksheet, the CBL design thinking process, conducting a survey to gather statistics, and research. Also a major contributor to our sheets.</p></div>
+<div class="member"><h3>Aaradhya Soni</h3><p>Responsible for conducting the survey alongside Vehan. Conducted thorough research on the topic and helped formulate the idea alongside Eashan.</p></div>
+</div>
+</div></section>
+
 <section id="pricing"><div class="in"><h2 data-t="pr"></h2><div class="plans" id="plans"></div></div></section>
-<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
-<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
+
+<section><div class="in"><h2>VR Headset Addons</h2>
+<p class="lead">To make learning much more interactive, EduPulse has decided to create VR headset addons, with three main models.</p>
+<div class="hsets">
+<div class="hset"><h3>The EduPulse Basic</h3><p>Features a cardboard structure, a neodymium ring magnet and a ceramic disc magnet to form an input, a headstrap, and biconvex lenses (25&nbsp;mm diameter, 45&nbsp;mm focal length) to create a great 3D experience.</p><div class="hprice">AED 4&ndash;8<span>INR 86&ndash;172</span></div></div>
+<div class="hset"><h3>The EduPulse Mobile Pro</h3><p>Features a polycarbonate body shell with adjustable optic lenses, a premium headstrap, and face cushioning to allow for more comfortable learning. It has a locking mechanism, and 2 inputs can be taken at a time.</p><div class="hprice">AED 34&ndash;68<span>INR 800&ndash;1,800</span><small>Price depends on market conditions</small></div></div>
+<div class="hset"><h3>The EduPulse Pro</h3><p>Has its own screen, two controllers supporting up to 5 inputs alongside analog sticks, face cushioning, premium optic lenses, and an audio system to immerse the user in learning. It has an elite cooling and thermal unit, a durable polycarbonate and polyamide structure for maximum durability, a much longer battery life, and an upgrade from a 60&nbsp;Hz screen to a 90&nbsp;Hz screen.</p><div class="hprice">From AED 400 <span>(basic version)</span><br>Up to AED 799 <span>(8 inputs)</span></div></div>
+</div>
+</div></section>
 </main>
+
 <footer>StudySync</footer>
 
 <div class="ov" id="tosOv" role="dialog" aria-modal="true" aria-labelledby="tosH">
@@ -88,7 +121,7 @@ footer{padding:24px 20px;text-align:center;font-size:.85rem;background:var(--bg)
 
 <script>
 /* ===== Edit these ===== */
-const LINKS = ['https://agent.creao.ai/apps/cfa83486-903a-4b54-a5b3-026e42d92e04', 'https://edupulsestudyplanner.netlify.app/', 'https://thefakepepsi.github.io/StudySync---Waypoint/', '#'];      // MAIN AI TERMINAL, LEDGER, CAREER COUNSELOR, THE VR HUB
+const LINKS = ['https://agent.creao.ai/apps/cfa83486-903a-4b54-a5b3-026e42d92e04', 'https://edupulsestudyplanner.netlify.app/', 'https://thefakepepsi.github.io/StudySync---Waypoint/', 'https://thefakepepsi.github.io/StudySyncVRHUB/'];      // MAIN AI TERMINAL, LEDGER, CAREER COUNSELOR, THE VR HUB
 const PRIVACY_URL = '#';                 // Privacy Policy link
 const RATE = {USD: 1/3.6725, INR: 24};   // per 1 AED (approximate; update INR as needed)
 /* ===================== */
