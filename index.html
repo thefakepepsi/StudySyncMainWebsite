@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StudySync</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#fff;--fg:#111;--abg:#f1f2f4;--afg:#111;--ff:'Space Grotesk',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:var(--ff);background:var(--bg);color:var(--fg);line-height:1.55}
+a{color:inherit}
+header{background:var(--bg);color:var(--fg);padding:28px 20px 0;text-align:center}
+h1{font-size:clamp(3rem,11vw,7rem);font-weight:700;letter-spacing:-.04em;line-height:1;margin:0}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px auto 0;max-width:1000px}
+nav a{padding:10px 16px;border:2px solid currentColor;border-radius:999px;text-decoration:none;font-weight:700;font-size:.85rem}
+nav a:hover,nav a:focus-visible{background:var(--fg);color:var(--bg);outline:none}
+.tools{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px;padding:18px 0 22px;font-size:.9rem}
+.tools>*{margin:0}
+button,select,.sw-group{display:inline-flex;align-items:center;gap:8px}
+.sw{display:inline-flex;gap:6px}
+.sw button{width:28px;height:28px;border-radius:50%;border:2px solid currentColor;padding:0;cursor:pointer;box-shadow:inset 0 0 0 2px var(--bg)}
+.sw button[aria-pressed=true]{outline:3px solid currentColor;outline-offset:2px}
+.gbtn{background:var(--fg);color:var(--bg);border-color:var(--fg);font-weight:700}
+section{padding:72px 20px}
+section:nth-of-type(odd){background:var(--bg);color:var(--fg)}
+section:nth-of-type(even){background:var(--abg);color:var(--afg)}
+.in{max-width:1000px;margin:0 auto}
+h2{font-size:clamp(2rem,6vw,3.6rem);font-weight:700;letter-spacing:-.03em;line-height:1.05;margin:0 0 14px}
+section p{max-width:60ch;margin:0;opacity:.85;font-size:1.05rem}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:32px}
+.plan{border:2px solid currentColor;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.plan h3{margin:0 0 8px;font-size:1.1rem}
+.plan .aed{font-size:2.4rem;font-weight:700;letter-spacing:-.03em;line-height:1}
+.plan .u{opacity:.75;font-size:.9rem}
+.plan .x{margin-top:10px;padding-top:10px;border-top:1px solid color-mix(in srgb,currentColor 35%,transparent);display:flex;justify-content:space-between;font-size:.95rem}
+.plan.soon{border-style:dashed;opacity:.7}
+footer{padding:24px 20px;text-align:center;font-size:.85rem;background:var(--bg);color:var(--fg)}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}
+.ov.on{display:flex}
+.modal{background:#fff;color:#111;border-radius:14px;padding:24px;max-width:460px;width:100%}
+.modal h3{margin:0 0 6px;font-size:1.4rem}
+.modal .terms{border:1px solid #ccc;border-radius:8px;padding:10px;height:110px;overflow:auto;font-size:.9rem;margin:12px 0}
+.modal label{display:flex;gap:8px;align-items:flex-start;margin-bottom:14px}
+.modal .row{display:flex;gap:10px;justify-content:flex-end}
+.modal .btn{border-color:#111}
+.modal .btn.pri{background:#111;color:#fff}
+.modal .btn:disabled{opacity:.4;cursor:not-allowed}
+:focus-visible{outline:3px solid currentColor;outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+  <h1>StudySync</h1>
+  <nav id="nav"></nav>
+  <div class="tools">
+    <span id="loc"></span>
+    <button class="btn" id="toEn"></button>
+    <select id="lang" aria-label="Language"></select>
+    <div class="seg" id="modes"></div>
+    <div class="pick" id="pick">
+      <div class="sw-group"><span id="lbBg"></span><div class="sw" id="swBg" role="group"></div></div>
+      <div class="sw-group"><span id="lbFg"></span><div class="sw" id="swFg" role="group"></div></div>
+    </div>
+    <button class="btn gbtn" id="sign"></button>
+  </div>
+</header>
+
+<main>
+<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
+<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
+<section id="pricing"><div class="in"><h2 data-t="pr"></h2><div class="plans" id="plans"></div></div></section>
+<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
+<section><div class="in"><h2 data-t="ph"></h2><p data-t="pt"></p></div></section>
+</main>
+<footer>StudySync</footer>
+
+<div class="ov" id="tosOv" role="dialog" aria-modal="true" aria-labelledby="tosH">
+  <div class="modal">
+    <p style="margin:0 0 10px"><a id="pp" href="#" data-link="privacy"></a></p>
+    <h3 id="tosH"></h3>
+    <div class="terms" id="terms"></div>
+    <label><input type="checkbox" id="chk"><span id="chkT"></span></label>
+    <div class="row"><button class="btn" id="tosNo"></button><button class="btn pri" id="tosOk" disabled></button></div>
+  </div>
+</div>
+
+<script>
+/* ===== Edit these ===== */
+const LINKS = ['#', '#', '#', '#'];      // MAIN AI TERMINAL, LEDGER, CAREER COUNSELOR, THE VR HUB
+const PRIVACY_URL = '#';                 // Privacy Policy link
+const RATE = {USD: 1/3.6725, INR: 24};   // per 1 AED (approximate; update INR as needed)
+/* ===================== */
+
+const T = {
+en:{n:['MAIN AI TERMINAL','LEDGER','CAREER COUNSELOR','THE VR HUB'],loc:'Localized to',en:'Switch to English',pr:'Pricing',sc:'For Private Schools',ng:'For NGOs',sp:'Single Package',cu:'Custom Plan',ps:'per student',pm:'per month',soon:'Coming soon',si:'Sign in with Google to sync',so:'Sign out',tt:'Terms of Service',ppn:'Privacy Policy',ac:'I accept the Terms of Service',ok:'Accept and continue',no:'Cancel',ph:'Placeholder title',pt:'Placeholder text goes here.',th:['Light','Dark','System'],bg:'Background',fg:'Content',terms:'Placeholder Terms of Service text.'},
+fr:{n:['TERMINAL IA PRINCIPAL','REGISTRE',"CONSEILLER D'ORIENTATION",'LE HUB VR'],loc:'Localisé pour',en:"Passer à l'anglais",pr:'Tarifs',sc:'Pour les écoles privées',ng:'Pour les ONG',sp:'Forfait individuel',cu:'Offre sur mesure',ps:'par élève',pm:'par mois',soon:'Bientôt disponible',si:'Se connecter avec Google pour synchroniser',so:'Se déconnecter',tt:"Conditions d'utilisation",ppn:'Politique de confidentialité',ac:"J'accepte les conditions d'utilisation",ok:'Accepter et continuer',no:'Annuler',ph:'Titre provisoire',pt:'Le texte provisoire va ici.',th:['Clair','Sombre','Système'],bg:'Arrière-plan',fg:'Contenu',terms:"Texte provisoire des conditions d'utilisation."},
+es:{n:['TERMINAL IA PRINCIPAL','REGISTRO','ORIENTADOR PROFESIONAL','EL HUB VR'],loc:'Localizado en',en:'Cambiar a inglés',pr:'Precios',sc:'Para colegios privados',ng:'Para ONG',sp:'Paquete individual',cu:'Plan personalizado',ps:'por estudiante',pm:'al mes',soon:'Próximamente',si:'Inicia sesión con Google para sincronizar',so:'Cerrar sesión',tt:'Términos del servicio',ppn:'Política de privacidad',ac:'Acepto los términos del servicio',ok:'Aceptar y continuar',no:'Cancelar',ph:'Título provisional',pt:'Aquí va el texto provisional.',th:['Claro','Oscuro','Sistema'],bg:'Fondo',fg:'Contenido',terms:'Texto provisional de los términos del servicio.'},
+ru:{n:['ГЛАВНЫЙ ИИ-ТЕРМИНАЛ','ЖУРНАЛ','КАРЬЕРНЫЙ КОНСУЛЬТАНТ','VR-ХАБ'],loc:'Регион',en:'Переключить на английский',pr:'Цены',sc:'Для частных школ',ng:'Для НКО',sp:'Отдельный пакет',cu:'Индивидуальный план',ps:'за ученика',pm:'в месяц',soon:'Скоро',si:'Войти через Google для синхронизации',so:'Выйти',tt:'Условия использования',ppn:'Политика конфиденциальности',ac:'Я принимаю условия использования',ok:'Принять и продолжить',no:'Отмена',ph:'Заголовок-заглушка',pt:'Здесь будет текст-заглушка.',th:['Светлая','Тёмная','Система'],bg:'Фон',fg:'Контент',terms:'Текст условий использования (заглушка).'},
+hi:{n:['मुख्य AI टर्मिनल','खाता-बही','करियर काउंसलर','VR हब'],loc:'स्थान',en:'अंग्रेज़ी में बदलें',pr:'मूल्य',sc:'निजी स्कूलों के लिए',ng:'एनजीओ के लिए',sp:'एकल पैकेज',cu:'कस्टम प्लान',ps:'प्रति छात्र',pm:'प्रति माह',soon:'जल्द आ रहा है',si:'सिंक करने के लिए Google से साइन इन करें',so:'साइन आउट',tt:'सेवा की शर्तें',ppn:'गोपनीयता नीति',ac:'मैं सेवा की शर्तें स्वीकार करता/करती हूँ',ok:'स्वीकार करें और आगे बढ़ें',no:'रद्द करें',ph:'प्लेसहोल्डर शीर्षक',pt:'यहाँ प्लेसहोल्डर टेक्स्ट आएगा।',th:['लाइट','डार्क','सिस्टम'],bg:'पृष्ठभूमि',fg:'सामग्री',terms:'सेवा की शर्तों का प्लेसहोल्डर टेक्स्ट।'},
+ur:{n:['مین اے آئی ٹرمینل','لیجر','کیریئر کونسلر','وی آر حب'],loc:'مقام',en:'انگریزی میں تبدیل کریں',pr:'قیمتیں',sc:'نجی اسکولوں کے لیے',ng:'این جی اوز کے لیے',sp:'واحد پیکیج',cu:'حسبِ ضرورت پلان',ps:'فی طالب علم',pm:'ماہانہ',soon:'جلد آ رہا ہے',si:'سنک کے لیے گوگل سے سائن اِن کریں',so:'سائن آؤٹ',tt:'شرائطِ خدمت',ppn:'رازداری کی پالیسی',ac:'میں شرائطِ خدمت قبول کرتا/کرتی ہوں',ok:'قبول کریں اور آگے بڑھیں',no:'منسوخ کریں',ph:'عارضی عنوان',pt:'یہاں عارضی متن آئے گا۔',th:['لائٹ','ڈارک','سسٹم'],bg:'پس منظر',fg:'مواد',terms:'شرائطِ خدمت کا عارضی متن۔'},
+ar:{n:['المحطة الرئيسية للذكاء الاصطناعي','السجل','مستشار المهن','مركز الواقع الافتراضي'],loc:'الموقع',en:'التبديل إلى الإنجليزية',pr:'الأسعار',sc:'للمدارس الخاصة',ng:'للمنظمات غير الربحية',sp:'باقة فردية',cu:'خطة مخصصة',ps:'للطالب',pm:'شهريًا',soon:'قريبًا',si:'سجّل الدخول عبر Google للمزامنة',so:'تسجيل الخروج',tt:'شروط الخدمة',ppn:'سياسة الخصوصية',ac:'أوافق على شروط الخدمة',ok:'موافقة ومتابعة',no:'إلغاء',ph:'عنوان مؤقت',pt:'سيوضع النص المؤقت هنا.',th:['فاتح','داكن','النظام'],bg:'الخلفية',fg:'المحتوى',terms:'نص مؤقت لشروط الخدمة.'},
+ta:{n:['முதன்மை AI முனையம்','பேரேடு','தொழில் ஆலோசகர்','VR மையம்'],loc:'இடம்',en:'ஆங்கிலத்திற்கு மாற்று',pr:'விலை',sc:'தனியார் பள்ளிகளுக்கு',ng:'தன்னார்வ அமைப்புகளுக்கு',sp:'தனிப் பொதி',cu:'தனிப்பயன் திட்டம்',ps:'ஒரு மாணவருக்கு',pm:'மாதம்',soon:'விரைவில்',si:'ஒத்திசைக்க Google மூலம் உள்நுழையவும்',so:'வெளியேறு',tt:'சேவை விதிமுறைகள்',ppn:'தனியுரிமைக் கொள்கை',ac:'சேவை விதிமுறைகளை ஏற்கிறேன்',ok:'ஏற்று தொடரவும்',no:'ரத்து செய்',ph:'இடஒதுக்கீட்டுத் தலைப்பு',pt:'இடஒதுக்கீட்டு உரை இங்கே வரும்.',th:['ஒளி','இருள்','கணினி'],bg:'பின்னணி',fg:'உள்ளடக்கம்',terms:'சேவை விதிமுறைகளுக்கான இடஒதுக்கீட்டு உரை.'}
+};
+const NAMES={en:'English',fr:'Français',es:'Español',ru:'Русский',hi:'हिन்दी'.replace('ந்','ந'),ur:'اردو',ar:'العربية',ta:'தமிழ்'};
+NAMES.hi='हिन्दी';
+const RTL=['ar','ur'];
+const TZ={'Asia/Dubai':'AE','Asia/Muscat':'OM','Asia/Riyadh':'SA','Asia/Qatar':'QA','Asia/Kuwait':'KW','Asia/Bahrain':'BH','Asia/Baghdad':'IQ','Asia/Amman':'JO','Asia/Beirut':'LB','Africa/Cairo':'EG','Africa/Casablanca':'MA','Africa/Algiers':'DZ','Africa/Tunis':'TN',
+'Asia/Kolkata':'IN','Asia/Calcutta':'IN','Asia/Karachi':'PK','Asia/Colombo':'LK','Europe/Moscow':'RU','Asia/Yekaterinburg':'RU','Asia/Novosibirsk':'RU','Asia/Vladivostok':'RU','Europe/Minsk':'BY',
+'Europe/Paris':'FR','Europe/Brussels':'BE','Europe/Madrid':'ES','America/Mexico_City':'MX','America/Bogota':'CO','America/Lima':'PE','America/Santiago':'CL','America/Argentina/Buenos_Aires':'AR','America/Caracas':'VE','Asia/Singapore':'SG','Europe/London':'GB','America/New_York':'US','America/Chicago':'US','America/Los_Angeles':'US'};
+const R2L={};
+'AE OM SA QA KW BH IQ JO LB EG MA DZ TN SY YE LY SD'.split(' ').forEach(r=>R2L[r]='ar');
+'RU BY KZ'.split(' ').forEach(r=>R2L[r]='ru');
+'FR BE SN CI'.split(' ').forEach(r=>R2L[r]='fr');
+'ES MX CO PE CL AR VE'.split(' ').forEach(r=>R2L[r]='es');
+R2L.IN='hi';R2L.PK='ur';R2L.LK='ta';
+
+const $=id=>document.getElementById(id);
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+function detect(){
+  let tz='',region='',city='';
+  try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+  city=(tz.split('/').pop()||'').replace(/_/g,' ');
+  region=TZ[tz]||'';
+  const langs=navigator.languages||[navigator.language||'en'];
+  if(!region){for(const l of langs){const m=/-([A-Za-z]{2})$/.exec(l);if(m){region=m[1].toUpperCase();break}}}
+  let lang=R2L[region];
+  if(!lang){const p=langs.map(l=>l.slice(0,2).toLowerCase()).find(l=>T[l]);lang=p||'en'}
+  if(region==='IN'&&langs.some(l=>l.toLowerCase().startsWith('ta')))lang='ta';
+  return {region,city,lang};
+}
+const geo=detect();
+let lang=store.get('ss_lang')||geo.lang;
+if(!T[lang])lang='en';
+
+function place(){
+  let country='';
+  try{if(geo.region)country=new Intl.DisplayNames([lang],{type:'region'}).of(geo.region)}catch(e){}
+  return [geo.city,country].filter(Boolean).join(', ')||'—';
+}
+function money(aed,cur){
+  const v=aed*RATE[cur];
+  return new Intl.NumberFormat(lang==='en'?'en-US':lang,{style:'currency',currency:cur,maximumFractionDigits:cur==='INR'?0:2}).format(v);
+}
+function aedFmt(n){return new Intl.NumberFormat(lang,{style:'currency',currency:'AED',maximumFractionDigits:0}).format(n)}
+
+function render(){
+  const t=T[lang];
+  document.documentElement.lang=lang;
+  document.documentElement.dir=RTL.includes(lang)?'rtl':'ltr';
+  $('nav').innerHTML=t.n.map((n,i)=>`<a href="${LINKS[i]}" data-link="${i}">${n}</a>`).join('');
+  $('loc').textContent=`${t.loc}: ${place()}`;
+  $('toEn').textContent=t.en;
+  $('toEn').style.display=lang==='en'?'none':'';
+  $('lang').innerHTML=Object.keys(T).map(k=>`<option value="${k}"${k===lang?' selected':''}>${NAMES[k]}</option>`).join('');
+  $('modes').innerHTML=['light','dark','system'].map((m,i)=>`<button data-m="${m}" aria-pressed="${mode===m}">${t.th[i]}</button>`).join('');
+  $('lbBg').textContent=t.bg;$('lbFg').textContent=t.fg;
+  document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t[e.dataset.t]);
+  const plans=[[t.sc,5,t.ps],[t.ng,3,t.ps],[t.sp,7,t.pm]];
+  $('plans').innerHTML=plans.map(([n,p,u])=>`<div class="plan"><h3>${n}</h3><div class="aed">${aedFmt(p)}</div><div class="u">${u}</div><div class="x"><span>${money(p,'INR')}</span><span>${money(p,'USD')}</span></div></div>`).join('')
+    +`<div class="plan soon"><h3>${t.cu}</h3><div class="aed">—</div><div class="u">${t.soon}</div></div>`;
+  $('sign').textContent=user?`${t.so} (${user.name})`:t.si;
+  $('pp').textContent=t.ppn;$('pp').href=PRIVACY_URL;
+  $('tosH').textContent=t.tt;$('terms').textContent=t.terms;$('chkT').textContent=t.ac;
+  $('tosOk').textContent=t.ok;$('tosNo').textContent=t.no;
+}
+
+/* ---- Theme ---- */
+let mode=store.get('ss_mode')||'system';
+const prefDark=matchMedia('(prefers-color-scheme: dark)').matches;
+const BGS=['#fdf6e3','#e8f1ff','#e9f5ec','#fde8ef','#14213d','#1f1f2e'];
+const FGS=['#1b4332','#0b3d91','#b5179e','#c1121f','#fca311','#f8f9fa'];
+let cBg=store.get('ss_bg')||(prefDark?'#14213d':'#fdf6e3');
+let cFg=store.get('ss_fg')||(prefDark?'#fca311':'#1b4332');
+function applyTheme(){
+  const s=document.documentElement.style;
+  const set=(a,b,c,d)=>{s.setProperty('--bg',a);s.setProperty('--fg',b);s.setProperty('--abg',c);s.setProperty('--afg',d)};
+  if(mode==='light')set('#ffffff','#111111','#f1f2f4','#111111');
+  else if(mode==='dark')set('#0d0f14','#f2f2f2','#181b23','#f2f2f2');
+  else set(cBg,cFg,cFg,cBg);      /* sections alternate: background/content colours swap */
+  $('pick').classList.toggle('on',mode==='system');
+  $('swBg').innerHTML=BGS.map(c=>`<button data-c="${c}" style="background:${c}" aria-label="${c}" aria-pressed="${c===cBg}"></button>`).join('');
+  $('swFg').innerHTML=FGS.map(c=>`<button data-c="${c}" style="background:${c}" aria-label="${c}" aria-pressed="${c===cFg}"></button>`).join('');
+  document.querySelectorAll('#modes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.m===mode));
+}
+$('modes').addEventListener('click',e=>{const m=e.target.dataset.m;if(m){mode=m;store.set('ss_mode',m);applyTheme()}});
+$('swBg').addEventListener('click',e=>{const c=e.target.dataset.c;if(c){cBg=c;store.set('ss_bg',c);applyTheme()}});
+$('swFg').addEventListener('click',e=>{const c=e.target.dataset.c;if(c){cFg=c;store.set('ss_fg',c);applyTheme()}});
+
+/* ---- Language ---- */
+$('lang').addEventListener('change',e=>{lang=e.target.value;store.set('ss_lang',lang);render();applyTheme()});
+$('toEn').addEventListener('click',()=>{lang='en';store.set('ss_lang',lang);render();applyTheme()});
+
+/* ---- Google sign-in (placeholder) ---- */
+let user=null,accepted=store.get('ss_tos')==='1';
+try{user=JSON.parse(store.get('ss_user')||'null')}catch(e){}
+/* Replace this with real Google Identity Services once you host the page on your own domain
+   with a Google OAuth client ID. It must resolve to {name, email}. */
+async function startGoogleSignIn(){
+  return {name:'Google user',email:'user@gmail.com'};
+}
+$('sign').addEventListener('click',async()=>{
+  if(user){user=null;store.set('ss_user','null');store.set('ss_tos','0');accepted=false;render();applyTheme();return}
+  user=await startGoogleSignIn();
+  store.set('ss_user',JSON.stringify(user));
+  render();applyTheme();
+  if(!accepted)openTos();
+});
+function openTos(){$('chk').checked=false;$('tosOk').disabled=true;$('tosOv').classList.add('on');$('chk').focus()}
+$('chk').addEventListener('change',e=>$('tosOk').disabled=!e.target.checked);
+$('tosOk').addEventListener('click',()=>{accepted=true;store.set('ss_tos','1');$('tosOv').classList.remove('on')});
+$('tosNo').addEventListener('click',()=>{user=null;store.set('ss_user','null');$('tosOv').classList.remove('on');render();applyTheme()});
+
+render();applyTheme();
+if(user&&!accepted)openTos();
+</script>
+</body>
+</html>
