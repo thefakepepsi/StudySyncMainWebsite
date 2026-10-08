@@ -41,6 +41,7 @@ footer{padding:24px 20px;text-align:center;font-size:.85rem;background:var(--bg)
 .ov.on{display:flex}
 .modal{background:#fff;color:#111;border-radius:14px;padding:24px;max-width:640px;width:100%;max-height:88vh;display:flex;flex-direction:column}
 .modal h3{margin:0 0 6px;font-size:1.4rem}
+.modal .tnote{margin:0 0 6px;font-size:.85rem;opacity:.75;max-width:none}
 .modal .terms{border:1px solid #ccc;border-radius:8px;padding:14px 16px;flex:1;min-height:0;overflow:auto;font-size:.88rem;line-height:1.5;margin:12px 0}
 .modal .terms h4{margin:16px 0 4px;font-size:.95rem}
 .modal .terms h4:first-child{margin-top:0}
@@ -84,28 +85,28 @@ section p.lead{margin-bottom:0}
 </header>
 
 <main>
-<section><div class="in"><h2>Our Mission</h2>
-<p>We, EduPulse, developed StudySync as a way to solve two major problems. Firstly, in private schools and many universities where device usage is a key part of the learning ecosystem, AI is often misused and often serves a purpose in cheating on assignments, unfair means during testing, etc. Secondly, people who live in low-income households often do not have proper access to education, giving people who are financially fortunate an advantage in succeeding academically over those who are not financially fortunate. We want to close this gap between children of low-income households and children of high-income households.</p>
+<section><div class="in"><h2 data-t="mt"></h2>
+<p data-t="mp"></p>
 </div></section>
 
-<section><div class="in"><h2>Meet the Team</h2>
+<section><div class="in"><h2 data-t="tm"></h2>
 <div class="team">
-<div class="member"><h3>Eashan Falnikar</h3><p>Founder. Responsible for making the main AI chatbot on Creao AI, the VR headset, and coming up with the idea.</p></div>
-<div class="member"><h3>Vivaan Agrawal</h3><p>Responsible for the creation of our VR environments, the financial breakdown of our digital services, and the creation of multiple versions of VR headsets.</p></div>
-<div class="member"><h3>Madhav Hissaria</h3><p>Responsible for the idea of features such as the Career Counselor and Study Planner. Developer of the main StudySync website, the VR Hub, the Career Counselor website, and the Ledger Study Planner.</p></div>
-<div class="member"><h3>Vehan Markandeya</h3><p>Responsible for the process journal, the empathizing stage, the HMW worksheet, the CBL design thinking process, conducting a survey to gather statistics, and research. Also a major contributor to our sheets.</p></div>
-<div class="member"><h3>Aaradhya Soni</h3><p>Responsible for conducting the survey alongside Vehan. Conducted thorough research on the topic and helped formulate the idea alongside Eashan.</p></div>
+<div class="member"><h3>Eashan Falnikar</h3><p data-t="r1"></p></div>
+<div class="member"><h3>Vivaan Agrawal</h3><p data-t="r2"></p></div>
+<div class="member"><h3>Madhav Hissaria</h3><p data-t="r3"></p></div>
+<div class="member"><h3>Vehan Markandeya</h3><p data-t="r4"></p></div>
+<div class="member"><h3>Aaradhya Soni</h3><p data-t="r5"></p></div>
 </div>
 </div></section>
 
 <section id="pricing"><div class="in"><h2 data-t="pr"></h2><div class="plans" id="plans"></div></div></section>
 
-<section><div class="in"><h2>VR Headset Addons</h2>
-<p class="lead">To make learning much more interactive, EduPulse has decided to create VR headset addons, with three main models.</p>
+<section><div class="in"><h2 data-t="vt"></h2>
+<p class="lead" data-t="vl"></p>
 <div class="hsets">
-<div class="hset"><h3>The EduPulse Basic</h3><p>Features a cardboard structure, a neodymium ring magnet and a ceramic disc magnet to form an input, a headstrap, and biconvex lenses (25&nbsp;mm diameter, 45&nbsp;mm focal length) to create a great 3D experience.</p><div class="hprice">AED 4&ndash;8<span>INR 86&ndash;172</span></div></div>
-<div class="hset"><h3>The EduPulse Mobile Pro</h3><p>Features a polycarbonate body shell with adjustable optic lenses, a premium headstrap, and face cushioning to allow for more comfortable learning. It has a locking mechanism, and 2 inputs can be taken at a time.</p><div class="hprice">AED 34&ndash;68<span>INR 800&ndash;1,800</span><small>Price depends on market conditions</small></div></div>
-<div class="hset"><h3>The EduPulse Pro</h3><p>Has its own screen, two controllers supporting up to 5 inputs alongside analog sticks, face cushioning, premium optic lenses, and an audio system to immerse the user in learning. It has an elite cooling and thermal unit, a durable polycarbonate and polyamide structure for maximum durability, a much longer battery life, and an upgrade from a 60&nbsp;Hz screen to a 90&nbsp;Hz screen.</p><div class="hprice">From AED 400 <span>(basic version)</span><br>Up to AED 799 <span>(8 inputs)</span></div></div>
+<div class="hset"><h3>EduPulse Basic</h3><p data-t="d1"></p><div class="hprice">AED 4&ndash;8<span>INR 86&ndash;172</span></div></div>
+<div class="hset"><h3>EduPulse Mobile Pro</h3><p data-t="d2"></p><div class="hprice">AED 34&ndash;68<span>INR 800&ndash;1,800</span><small data-t="pc"></small></div></div>
+<div class="hset"><h3>EduPulse Pro</h3><p data-t="d3"></p><div class="hprice"><span id="pf" style="display:inline;opacity:1;font-size:inherit;font-weight:inherit;margin:0"></span> AED 400 <span id="bv"></span><br><span id="pu" style="display:inline;opacity:1;font-size:inherit;font-weight:inherit;margin:0"></span> AED 799 <span id="i8"></span></div></div>
 </div>
 </div></section>
 </main>
@@ -116,6 +117,7 @@ section p.lead{margin-bottom:0}
   <div class="modal">
     <p style="margin:0 0 10px"><a id="pp" href="#" data-link="privacy"></a></p>
     <h3 id="tosH"></h3>
+    <p class="tnote" id="tnote"></p>
     <div class="terms" id="terms"></div>
     <label><input type="checkbox" id="chk"><span id="chkT"></span></label>
     <div class="row"><button class="btn" id="tosNo"></button><button class="btn pri" id="tosOk" disabled></button></div>
@@ -123,25 +125,144 @@ section p.lead{margin-bottom:0}
 </div>
 
 <script>
-/* ===== Edit these ===== */
-const LINKS = ['https://agent.creao.ai/apps/cfa83486-903a-4b54-a5b3-026e42d92e04', 'https://edupulsestudyplanner.netlify.app/', 'https://thefakepepsi.github.io/StudySync---Waypoint/', 'https://thefakepepsi.github.io/StudySyncVRHUB/'];      // MAIN AI TERMINAL, LEDGER, CAREER COUNSELOR, THE VR HUB
+
+const LINKS = ['https://agent.creao.ai/apps/cfa83486-903a-4b54-a5b3-026e42d92e04', 'https://edupulsestudyplanner.netlify.app/', 'https://thefakepepsi.github.io/StudySync---Waypoint/', 'https://thefakepepsi.github.io/StudySyncVRHUB/']; 
 const PRIVACY_URL = 'https://thefakepepsi.github.io/StudySyncPrivacyPolicy/';                 // Privacy Policy link
-const RATE = {USD: 1/3.6725, INR: 24};   // per 1 AED (approximate; update INR as needed)
-/* ===================== */
+const RATE = {USD: 1/3.6725, INR: 24}; 
 
 const TERMS_HTML = '<h4>Who these terms apply to</h4>\n<p>These Terms of Service ("Terms") are a binding agreement between you and EduPulse ("EduPulse", "we", "us", "our"), the operator of StudySync, founded by Eashan Falnikar. They apply to individual students, parents/guardians, schools, NGOs and any other user of StudySync\'s website and features: the Main AI Terminal, Ledger, Career Counselor ("Waypoint") and The VR Hub. Where a school or NGO enrolls students under an institutional plan, these Terms apply to that institution and, through it, to the students it enrolls.</p>\n\n<h4>Accounts and sign-in</h4>\n<p>StudySync currently supports sign-in through Google Sign-In only, so your StudySync account is linked to your Google account. You are responsible for keeping your Google account credentials secure and for all activity that occurs under your StudySync account. You must provide accurate account information and keep it up to date. Institutional accounts (schools and NGOs) are responsible for managing which students, staff or members are enrolled under their plan.</p>\n\n<h4>Eligibility, minors and school/NGO enrollment</h4>\n<p>StudySync is designed to be used by students of school age, as well as adults. If you are under 18: you may use StudySync only with the consent of a parent, legal guardian, or an enrolling school or NGO acting on your behalf, consistent with the parental/guardian consent requirements described in our Privacy Policy; a parent, guardian or the enrolling institution is responsible for reviewing these Terms and the Privacy Policy before you begin using StudySync; a parent or guardian may contact us at any time to review, restrict or end a minor\'s use of StudySync. By enrolling students, a school or NGO confirms to EduPulse that it has the authority and any necessary parental/guardian consent to do so under its own applicable education and data protection obligations.</p>\n\n<h4>The services</h4>\n<p><strong>Main AI Terminal</strong> &mdash; an AI-assisted tutoring interface for asking questions and working through academic material.<br>\n<strong>Ledger</strong> &mdash; your account, subscription and usage record.<br>\n<strong>Career Counselor (Waypoint)</strong> &mdash; a multilingual AI tool offering career guidance in demo or regular mode, currently powered by a third-party AI provider\'s API.<br>\n<strong>The VR Hub</strong> &mdash; VR learning modules across Chemistry, Biology, Geography and Physics, designed for use with EduPulse-compatible VR headsets (EduPulse Basic, Mobile Pro, and Pro).</p>\n<p>We may add, modify or discontinue features of StudySync over time. We will make reasonable efforts to notify schools, NGOs and users of material changes to core functionality.</p>\n\n<h4>Acceptable use and academic integrity</h4>\n<p>Part of EduPulse\'s mission is to curb misuse of AI in schools and close the education gap for low-income households. In using StudySync, you agree not to: use the AI Terminal, Waypoint or any StudySync feature to complete graded assessments, exams or assignments in a way that violates your school\'s academic integrity policy; attempt to bypass, disable or circumvent any misuse-prevention or monitoring feature built into StudySync; share your account credentials, or access another user\'s account without authorization; upload or submit content that is unlawful, harassing, hateful, sexually explicit, or otherwise inappropriate, particularly given that StudySync is used by children; attempt to reverse-engineer, scrape or interfere with StudySync\'s underlying software, including the AI models it relies on; use StudySync for any purpose that violates applicable UAE or Indian law. We may review usage patterns to detect misuse consistent with this academic-integrity mission, as described in our Privacy Policy.</p>\n\n<h4>The VR Hub and headset use</h4>\n<p>VR modules involve immersive, motion-based content. Use VR headsets in a clear, safe physical space, and follow the headset manufacturer\'s safety guidance, especially for younger students. Schools and NGOs providing headsets to students are responsible for age-appropriate supervision during VR sessions. EduPulse-branded headset tiers (Basic, Mobile Pro, Pro) are sold separately under their own pricing and, where applicable, separate hardware warranty terms.</p>\n\n<h4>Plans, pricing and payment</h4>\n<p>StudySync offers a Private Schools plan, an NGO plan, a single-package plan and custom plans, priced in AED as shown on the pricing page at the time of purchase. Fees are billed according to the plan selected and are non-refundable except as required by law or as we otherwise state in writing. We may change pricing for future billing periods; we will provide reasonable notice of price changes to affected accounts. Payment information is processed by our third-party payment processor; EduPulse does not store full card numbers. If payment is not received, we may suspend access to paid features until the account is brought current.</p>\n\n<h4>Intellectual property</h4>\n<p>StudySync\'s software, design, VR content, course material and branding (including the EduPulse and StudySync names and marks) are owned by EduPulse or its licensors and are protected by UAE and Indian intellectual property law. We grant you a limited, non-exclusive, non-transferable license to use StudySync for its intended educational purpose. You may not copy, resell, sublicense or create derivative works from StudySync\'s content or software without our written permission.</p>\n\n<h4>User content and AI-generated output</h4>\n<p>You retain ownership of the questions, answers and other content you submit to StudySync ("User Content"), and you grant EduPulse a license to use it to operate and improve the service. AI-generated responses from the AI Terminal or Waypoint are produced automatically and may occasionally be inaccurate or incomplete. They are provided to support learning and career exploration, not as a substitute for professional academic, medical, legal or career advice. You are responsible for how you use AI-generated output, including verifying it before relying on it for graded work or important decisions.</p>\n\n<h4>Privacy</h4>\n<p>Our collection and use of personal data, including special protections for children\'s data, is described in our Privacy Policy, prepared with reference to the UAE PDPL and India\'s DPDP Act, 2023. The Privacy Policy forms part of these Terms.</p>\n\n<h4>Suspension and termination</h4>\n<p>We may suspend or terminate your access to StudySync if you violate these Terms, misuse the platform, or if required by law. A school or NGO administrator may remove a student\'s institutional account at any time; the student or their parent/guardian may separately request deletion of the student\'s personal data as described in our Privacy Policy. You may stop using StudySync and request account closure at any time by contacting us. Provisions of these Terms that by their nature should survive termination (including Sections 8, 12 and 13) will survive.</p>\n\n<h4>Disclaimers</h4>\n<p>StudySync is provided "as is" and "as available." To the extent permitted by UAE and Indian law, EduPulse disclaims warranties of any kind, whether express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not guarantee that AI-generated content will be error-free, or that the service will be uninterrupted or secure at all times.</p>\n\n<h4>Limitation of liability</h4>\n<p>To the maximum extent permitted by applicable law, EduPulse will not be liable for indirect, incidental, special or consequential damages arising from your use of StudySync. Nothing in these Terms limits liability that cannot be excluded under UAE or Indian law, including liability for fraud, gross negligence, or violations of mandatory consumer or data protection protections applicable to minors.</p>\n\n<h4>Governing law and disputes</h4>\n<p>These Terms are governed by the laws of the United Arab Emirates, without prejudice to any mandatory consumer or data protection rights you may have under the law of India where you are located there, particularly rights concerning a child\'s data under the DPDP Act. Any dispute arising from these Terms will first be addressed through good-faith discussion between you (or, for a minor, your parent/guardian or enrolling institution) and EduPulse before formal proceedings are pursued in the competent courts of the UAE, unless a mandatory local law requires otherwise.</p>\n\n<h4>Changes to these terms</h4>\n<p>We may update these Terms from time to time to reflect changes in StudySync\'s features or in UAE or Indian law. We will update the "Last updated" date above, and for material changes &mdash; particularly those affecting children or enrolled students &mdash; we will take reasonable steps to notify schools, NGOs, parents/guardians or users directly. Continued use of StudySync after changes take effect means you accept the updated Terms.</p>\n\n<h4>Contact us</h4>\n<p>Questions about these Terms can be sent to:<br>Email: edupulse@gmail.com<br>Attention: EduPulse (StudySync) Support</p>';
+
 const T = {
-en:{n:['MAIN AI TERMINAL','LEDGER','CAREER COUNSELOR','THE VR HUB'],loc:'Localized to',en:'Switch to English',pr:'Pricing',sc:'For Private Schools',ng:'For NGOs',sp:'Single Package',cu:'Custom Plan',ps:'per student',pm:'per month',soon:'Coming soon',si:'Sign in with Google to sync',so:'Sign out',tt:'Terms of Service',ppn:'Privacy Policy',ac:'I accept the Terms of Service',ok:'Accept and continue',no:'Cancel',ph:'Placeholder title',pt:'Placeholder text goes here.',th:['Light','Dark','System'],bg:'Background',fg:'Content',terms:'Placeholder Terms of Service text.'},
-fr:{n:['TERMINAL IA PRINCIPAL','REGISTRE',"CONSEILLER D'ORIENTATION",'LE HUB VR'],loc:'Localisé pour',en:"Passer à l'anglais",pr:'Tarifs',sc:'Pour les écoles privées',ng:'Pour les ONG',sp:'Forfait individuel',cu:'Offre sur mesure',ps:'par élève',pm:'par mois',soon:'Bientôt disponible',si:'Se connecter avec Google pour synchroniser',so:'Se déconnecter',tt:"Conditions d'utilisation",ppn:'Politique de confidentialité',ac:"J'accepte les conditions d'utilisation",ok:'Accepter et continuer',no:'Annuler',ph:'Titre provisoire',pt:'Le texte provisoire va ici.',th:['Clair','Sombre','Système'],bg:'Arrière-plan',fg:'Contenu',terms:"Texte provisoire des conditions d'utilisation."},
-es:{n:['TERMINAL IA PRINCIPAL','REGISTRO','ORIENTADOR PROFESIONAL','EL HUB VR'],loc:'Localizado en',en:'Cambiar a inglés',pr:'Precios',sc:'Para colegios privados',ng:'Para ONG',sp:'Paquete individual',cu:'Plan personalizado',ps:'por estudiante',pm:'al mes',soon:'Próximamente',si:'Inicia sesión con Google para sincronizar',so:'Cerrar sesión',tt:'Términos del servicio',ppn:'Política de privacidad',ac:'Acepto los términos del servicio',ok:'Aceptar y continuar',no:'Cancelar',ph:'Título provisional',pt:'Aquí va el texto provisional.',th:['Claro','Oscuro','Sistema'],bg:'Fondo',fg:'Contenido',terms:'Texto provisional de los términos del servicio.'},
-ru:{n:['ГЛАВНЫЙ ИИ-ТЕРМИНАЛ','ЖУРНАЛ','КАРЬЕРНЫЙ КОНСУЛЬТАНТ','VR-ХАБ'],loc:'Регион',en:'Переключить на английский',pr:'Цены',sc:'Для частных школ',ng:'Для НКО',sp:'Отдельный пакет',cu:'Индивидуальный план',ps:'за ученика',pm:'в месяц',soon:'Скоро',si:'Войти через Google для синхронизации',so:'Выйти',tt:'Условия использования',ppn:'Политика конфиденциальности',ac:'Я принимаю условия использования',ok:'Принять и продолжить',no:'Отмена',ph:'Заголовок-заглушка',pt:'Здесь будет текст-заглушка.',th:['Светлая','Тёмная','Система'],bg:'Фон',fg:'Контент',terms:'Текст условий использования (заглушка).'},
-hi:{n:['मुख्य AI टर्मिनल','खाता-बही','करियर काउंसलर','VR हब'],loc:'स्थान',en:'अंग्रेज़ी में बदलें',pr:'मूल्य',sc:'निजी स्कूलों के लिए',ng:'एनजीओ के लिए',sp:'एकल पैकेज',cu:'कस्टम प्लान',ps:'प्रति छात्र',pm:'प्रति माह',soon:'जल्द आ रहा है',si:'सिंक करने के लिए Google से साइन इन करें',so:'साइन आउट',tt:'सेवा की शर्तें',ppn:'गोपनीयता नीति',ac:'मैं सेवा की शर्तें स्वीकार करता/करती हूँ',ok:'स्वीकार करें और आगे बढ़ें',no:'रद्द करें',ph:'प्लेसहोल्डर शीर्षक',pt:'यहाँ प्लेसहोल्डर टेक्स्ट आएगा।',th:['लाइट','डार्क','सिस्टम'],bg:'पृष्ठभूमि',fg:'सामग्री',terms:'सेवा की शर्तों का प्लेसहोल्डर टेक्स्ट।'},
-ur:{n:['مین اے آئی ٹرمینل','لیجر','کیریئر کونسلر','وی آر حب'],loc:'مقام',en:'انگریزی میں تبدیل کریں',pr:'قیمتیں',sc:'نجی اسکولوں کے لیے',ng:'این جی اوز کے لیے',sp:'واحد پیکیج',cu:'حسبِ ضرورت پلان',ps:'فی طالب علم',pm:'ماہانہ',soon:'جلد آ رہا ہے',si:'سنک کے لیے گوگل سے سائن اِن کریں',so:'سائن آؤٹ',tt:'شرائطِ خدمت',ppn:'رازداری کی پالیسی',ac:'میں شرائطِ خدمت قبول کرتا/کرتی ہوں',ok:'قبول کریں اور آگے بڑھیں',no:'منسوخ کریں',ph:'عارضی عنوان',pt:'یہاں عارضی متن آئے گا۔',th:['لائٹ','ڈارک','سسٹم'],bg:'پس منظر',fg:'مواد',terms:'شرائطِ خدمت کا عارضی متن۔'},
-ar:{n:['المحطة الرئيسية للذكاء الاصطناعي','السجل','مستشار المهن','مركز الواقع الافتراضي'],loc:'الموقع',en:'التبديل إلى الإنجليزية',pr:'الأسعار',sc:'للمدارس الخاصة',ng:'للمنظمات غير الربحية',sp:'باقة فردية',cu:'خطة مخصصة',ps:'للطالب',pm:'شهريًا',soon:'قريبًا',si:'سجّل الدخول عبر Google للمزامنة',so:'تسجيل الخروج',tt:'شروط الخدمة',ppn:'سياسة الخصوصية',ac:'أوافق على شروط الخدمة',ok:'موافقة ومتابعة',no:'إلغاء',ph:'عنوان مؤقت',pt:'سيوضع النص المؤقت هنا.',th:['فاتح','داكن','النظام'],bg:'الخلفية',fg:'المحتوى',terms:'نص مؤقت لشروط الخدمة.'},
-ta:{n:['முதன்மை AI முனையம்','பேரேடு','தொழில் ஆலோசகர்','VR மையம்'],loc:'இடம்',en:'ஆங்கிலத்திற்கு மாற்று',pr:'விலை',sc:'தனியார் பள்ளிகளுக்கு',ng:'தன்னார்வ அமைப்புகளுக்கு',sp:'தனிப் பொதி',cu:'தனிப்பயன் திட்டம்',ps:'ஒரு மாணவருக்கு',pm:'மாதம்',soon:'விரைவில்',si:'ஒத்திசைக்க Google மூலம் உள்நுழையவும்',so:'வெளியேறு',tt:'சேவை விதிமுறைகள்',ppn:'தனியுரிமைக் கொள்கை',ac:'சேவை விதிமுறைகளை ஏற்கிறேன்',ok:'ஏற்று தொடரவும்',no:'ரத்து செய்',ph:'இடஒதுக்கீட்டுத் தலைப்பு',pt:'இடஒதுக்கீட்டு உரை இங்கே வரும்.',th:['ஒளி','இருள்','கணினி'],bg:'பின்னணி',fg:'உள்ளடக்கம்',terms:'சேவை விதிமுறைகளுக்கான இடஒதுக்கீட்டு உரை.'}
+en:{n:['MAIN AI TERMINAL','LEDGER','CAREER COUNSELOR','THE VR HUB'],loc:'Localized to',en:'Switch to English',pr:'Pricing',sc:'For Private Schools',ng:'For NGOs',sp:'Single Package',cu:'Custom Plan',ps:'per student',pm:'per month',soon:'Coming soon',si:'Sign in with Google to sync',so:'Sign out',tt:'Terms of Service',ppn:'Privacy Policy',ac:'I accept the Terms of Service',ok:'Accept and continue',no:'Cancel',th:['Light','Dark','System'],bg:'Background',fg:'Content',
+ tn:'',
+ mt:'Our Mission',
+ mp:'We, EduPulse, developed StudySync as a way to solve two major problems. Firstly, in private schools and many universities where device usage is a key part of the learning ecosystem, AI is often misused and often serves a purpose in cheating on assignments, unfair means during testing, etc. Secondly, people who live in low-income households often do not have proper access to education, giving people who are financially fortunate an advantage in succeeding academically over those who are not financially fortunate. We want to close this gap between children of low-income households and children of high-income households.',
+ tm:'Meet the Team',
+ r1:'Founder. Responsible for making the main AI chatbot on Creao AI, the VR headset, and coming up with the idea.',
+ r2:'Responsible for the creation of our VR environments, the financial breakdown of our digital services, and the creation of multiple versions of VR headsets.',
+ r3:'Responsible for the idea of features such as the Career Counselor and Study Planner. Developer of the main StudySync website, the VR Hub, the Career Counselor website, and the Ledger Study Planner.',
+ r4:'Responsible for the process journal, the empathizing stage, the HMW worksheet, the CBL design thinking process, conducting a survey to gather statistics, and research. Also a major contributor to our sheets.',
+ r5:'Responsible for conducting the survey alongside Vehan. Conducted thorough research on the topic and helped formulate the idea alongside Eashan.',
+ vt:'VR Headset Addons',
+ vl:'To make learning much more interactive, EduPulse has decided to create VR headset addons, with three main models.',
+ d1:'Features a cardboard structure, a neodymium ring magnet and a ceramic disc magnet to form an input, a headstrap, and biconvex lenses (25\u00a0mm diameter, 45\u00a0mm focal length) to create a great 3D experience.',
+ d2:'Features a polycarbonate body shell with adjustable optic lenses, a premium headstrap, and face cushioning to allow for more comfortable learning. It has a locking mechanism, and 2 inputs can be taken at a time.',
+ d3:'Has its own screen, two controllers supporting up to 5 inputs alongside analog sticks, face cushioning, premium optic lenses, and an audio system to immerse the user in learning. It has an elite cooling and thermal unit, a durable polycarbonate and polyamide structure for maximum durability, a much longer battery life, and an upgrade from a 60\u00a0Hz screen to a 90\u00a0Hz screen.',
+ pc:'Price depends on market conditions',pf:'From',pu:'Up to',bv:'(basic version)',i8:'(8 inputs)'},
+fr:{n:['TERMINAL IA PRINCIPAL','REGISTRE',"CONSEILLER D'ORIENTATION",'LE HUB VR'],loc:'Localisé pour',en:"Passer à l'anglais",pr:'Tarifs',sc:'Pour les écoles privées',ng:'Pour les ONG',sp:'Forfait individuel',cu:'Offre sur mesure',ps:'par élève',pm:'par mois',soon:'Bientôt disponible',si:'Se connecter avec Google pour synchroniser',so:'Se déconnecter',tt:"Conditions d'utilisation",ppn:'Politique de confidentialité',ac:"J'accepte les conditions d'utilisation",ok:'Accepter et continuer',no:'Annuler',th:['Clair','Sombre','Système'],bg:'Arrière-plan',fg:'Contenu',
+ tn:"Les conditions d'utilisation complètes ci-dessous sont rédigées en anglais, version juridiquement contraignante.",
+ mt:'Notre mission',
+ mp:"Nous, EduPulse, avons développé StudySync pour résoudre deux grands problèmes. Premièrement, dans les écoles privées et de nombreuses universités où l'usage des appareils est au cœur de l'apprentissage, l'IA est souvent détournée pour tricher aux devoirs, recourir à des moyens déloyaux lors des examens, etc. Deuxièmement, les personnes issues de foyers à faibles revenus n'ont souvent pas un accès adéquat à l'éducation, ce qui donne aux personnes financièrement favorisées un avantage pour réussir leurs études. Nous voulons réduire cet écart entre les enfants des foyers à faibles revenus et ceux des foyers à revenus élevés.",
+ tm:"Rencontrez l'équipe",
+ r1:"Fondateur. Responsable de la création du chatbot IA principal sur Creao AI, du casque VR et de l'idée de départ.",
+ r2:"Responsable de la création de nos environnements VR, de l'analyse financière de nos services numériques et de la conception de plusieurs versions de casques VR.",
+ r3:"Responsable de l'idée de fonctionnalités comme le Conseiller d'orientation et le Planificateur d'études. Développeur du site principal de StudySync, du Hub VR, du site du Conseiller d'orientation et du planificateur d'études Ledger.",
+ r4:"Responsable du journal de processus, de la phase d'empathie, de la fiche HMW, de la démarche de design thinking CBL, de la réalisation d'un sondage pour recueillir des statistiques, et de la recherche. Contributeur majeur de nos feuilles de calcul.",
+ r5:"Responsable de la réalisation du sondage avec Vehan. A mené des recherches approfondies sur le sujet et aidé à formuler l'idée avec Eashan.",
+ vt:'Casques VR complémentaires',
+ vl:"Pour rendre l'apprentissage bien plus interactif, EduPulse a décidé de créer des casques VR complémentaires, avec trois modèles principaux.",
+ d1:"Structure en carton, aimant annulaire en néodyme et aimant disque en céramique formant une commande, serre-tête et lentilles biconvexes (25\u00a0mm de diamètre, 45\u00a0mm de focale) pour une excellente expérience 3D.",
+ d2:"Coque en polycarbonate avec lentilles optiques réglables, serre-tête premium et coussinets faciaux pour un apprentissage plus confortable. Il dispose d'un mécanisme de verrouillage et de 2 commandes simultanées.",
+ d3:"Écran intégré, deux manettes prenant en charge jusqu'à 5 commandes ainsi que des joysticks analogiques, coussinets faciaux, lentilles optiques premium et système audio pour immerger l'utilisateur dans l'apprentissage. Il comprend une unité de refroidissement et thermique d'élite, une structure durable en polycarbonate et polyamide, une autonomie bien plus longue et un écran passant de 60\u00a0Hz à 90\u00a0Hz.",
+ pc:'Le prix dépend des conditions du marché',pf:'À partir de',pu:"Jusqu'à",bv:'(version de base)',i8:'(8 commandes)'},
+es:{n:['TERMINAL IA PRINCIPAL','REGISTRO','ORIENTADOR PROFESIONAL','EL HUB VR'],loc:'Localizado en',en:'Cambiar a inglés',pr:'Precios',sc:'Para colegios privados',ng:'Para ONG',sp:'Paquete individual',cu:'Plan personalizado',ps:'por estudiante',pm:'al mes',soon:'Próximamente',si:'Inicia sesión con Google para sincronizar',so:'Cerrar sesión',tt:'Términos del servicio',ppn:'Política de privacidad',ac:'Acepto los términos del servicio',ok:'Aceptar y continuar',no:'Cancelar',th:['Claro','Oscuro','Sistema'],bg:'Fondo',fg:'Contenido',
+ tn:'Los términos del servicio completos que aparecen abajo están en inglés, que es la versión legalmente vinculante.',
+ mt:'Nuestra misión',
+ mp:'Nosotros, EduPulse, desarrollamos StudySync para resolver dos grandes problemas. Primero, en los colegios privados y muchas universidades donde el uso de dispositivos es parte clave del aprendizaje, la IA suele usarse mal y a menudo sirve para hacer trampa en las tareas, obtener ventajas injustas en los exámenes, etc. Segundo, las personas de hogares con bajos ingresos con frecuencia no tienen un acceso adecuado a la educación, lo que da a quienes tienen más recursos económicos una ventaja para triunfar académicamente. Queremos cerrar esta brecha entre los niños de hogares de bajos ingresos y los de hogares de altos ingresos.',
+ tm:'Conoce al equipo',
+ r1:'Fundador. Responsable de crear el chatbot de IA principal en Creao AI, el visor de VR y de tener la idea original.',
+ r2:'Responsable de crear nuestros entornos de VR, el desglose financiero de nuestros servicios digitales y la creación de varias versiones de visores de VR.',
+ r3:'Responsable de la idea de funciones como el Orientador profesional y el Planificador de estudio. Desarrollador del sitio principal de StudySync, el Hub VR, el sitio del Orientador profesional y el planificador de estudio Ledger.',
+ r4:'Responsable del diario de proceso, la etapa de empatía, la hoja HMW, el proceso de design thinking CBL, la realización de una encuesta para reunir estadísticas y la investigación. También gran colaborador de nuestras hojas de cálculo.',
+ r5:'Responsable de realizar la encuesta junto con Vehan. Hizo una investigación exhaustiva sobre el tema y ayudó a formular la idea junto con Eashan.',
+ vt:'Complementos de visores VR',
+ vl:'Para que el aprendizaje sea mucho más interactivo, EduPulse ha decidido crear complementos de visores VR, con tres modelos principales.',
+ d1:'Incluye una estructura de cartón, un imán de anillo de neodimio y un imán de disco de cerámica que forman una entrada, una cinta para la cabeza y lentes biconvexas (25\u00a0mm de diámetro, 45\u00a0mm de distancia focal) para crear una gran experiencia 3D.',
+ d2:'Incluye una carcasa de policarbonato con lentes ópticas ajustables, una cinta premium y acolchado facial para un aprendizaje más cómodo. Tiene un mecanismo de bloqueo y admite 2 entradas a la vez.',
+ d3:'Tiene su propia pantalla, dos mandos que admiten hasta 5 entradas además de palancas analógicas, acolchado facial, lentes ópticas premium y un sistema de audio para sumergir al usuario en el aprendizaje. Cuenta con una unidad de refrigeración y térmica de élite, una estructura duradera de policarbonato y poliamida, una batería mucho más duradera y una pantalla mejorada de 60\u00a0Hz a 90\u00a0Hz.',
+ pc:'El precio depende de las condiciones del mercado',pf:'Desde',pu:'Hasta',bv:'(versión básica)',i8:'(8 entradas)'},
+ru:{n:['ГЛАВНЫЙ ИИ-ТЕРМИНАЛ','ЖУРНАЛ','КАРЬЕРНЫЙ КОНСУЛЬТАНТ','VR-ХАБ'],loc:'Регион',en:'Переключить на английский',pr:'Цены',sc:'Для частных школ',ng:'Для НКО',sp:'Отдельный пакет',cu:'Индивидуальный план',ps:'за ученика',pm:'в месяц',soon:'Скоро',si:'Войти через Google для синхронизации',so:'Выйти',tt:'Условия использования',ppn:'Политика конфиденциальности',ac:'Я принимаю условия использования',ok:'Принять и продолжить',no:'Отмена',th:['Светлая','Тёмная','Система'],bg:'Фон',fg:'Контент',
+ tn:'Полный текст условий использования ниже представлен на английском языке, который является юридически обязывающей версией.',
+ mt:'Наша миссия',
+ mp:'Мы, EduPulse, создали StudySync, чтобы решить две серьёзные проблемы. Во-первых, в частных школах и многих университетах, где использование устройств — ключевая часть обучения, ИИ часто используют неправильно: для списывания на заданиях, нечестных способов на экзаменах и т. д. Во-вторых, люди из семей с низким доходом часто не имеют надлежащего доступа к образованию, и это даёт финансово обеспеченным людям преимущество в учёбе. Мы хотим сократить этот разрыв между детьми из семей с низким и высоким доходом.',
+ tm:'Наша команда',
+ r1:'Основатель. Отвечает за создание главного ИИ-чат-бота на Creao AI, VR-гарнитуры и за саму идею.',
+ r2:'Отвечает за создание наших VR-сред, финансовый расчёт наших цифровых услуг и разработку нескольких версий VR-гарнитур.',
+ r3:'Отвечает за идею таких функций, как Карьерный консультант и Планировщик учёбы. Разработчик главного сайта StudySync, VR-хаба, сайта Карьерного консультанта и планировщика учёбы Ledger.',
+ r4:'Отвечает за журнал процесса, этап эмпатии, лист HMW, процесс дизайн-мышления CBL, проведение опроса для сбора статистики и исследования. Также внёс большой вклад в наши таблицы.',
+ r5:'Отвечает за проведение опроса вместе с Vehan. Провёл глубокое исследование темы и помог сформулировать идею вместе с Eashan.',
+ vt:'VR-гарнитуры',
+ vl:'Чтобы сделать обучение гораздо интерактивнее, EduPulse решила создать дополнительные VR-гарнитуры трёх основных моделей.',
+ d1:'Картонный корпус, кольцевой неодимовый магнит и керамический дисковый магнит, образующие устройство ввода, оголовье и двояковыпуклые линзы (диаметр 25\u00a0мм, фокусное расстояние 45\u00a0мм) для отличного 3D-эффекта.',
+ d2:'Поликарбонатный корпус с регулируемыми оптическими линзами, премиальное оголовье и мягкая накладка на лицо для более комфортного обучения. Есть механизм фиксации, одновременно поддерживается 2 входа.',
+ d3:'Собственный экран, два контроллера с поддержкой до 5 входов и аналоговыми стиками, мягкая накладка на лицо, премиальные оптические линзы и аудиосистема для полного погружения в обучение. Элитный блок охлаждения и терморегуляции, прочный корпус из поликарбоната и полиамида, значительно более длительная работа от аккумулятора и экран 90\u00a0Гц вместо 60\u00a0Гц.',
+ pc:'Цена зависит от рыночных условий',pf:'От',pu:'До',bv:'(базовая версия)',i8:'(8 входов)'},
+hi:{n:['मुख्य AI टर्मिनल','खाता-बही','करियर काउंसलर','VR हब'],loc:'स्थान',en:'अंग्रेज़ी में बदलें',pr:'मूल्य',sc:'निजी स्कूलों के लिए',ng:'एनजीओ के लिए',sp:'एकल पैकेज',cu:'कस्टम प्लान',ps:'प्रति छात्र',pm:'प्रति माह',soon:'जल्द आ रहा है',si:'सिंक करने के लिए Google से साइन इन करें',so:'साइन आउट',tt:'सेवा की शर्तें',ppn:'गोपनीयता नीति',ac:'मैं सेवा की शर्तें स्वीकार करता/करती हूँ',ok:'स्वीकार करें और आगे बढ़ें',no:'रद्द करें',th:['लाइट','डार्क','सिस्टम'],bg:'पृष्ठभूमि',fg:'सामग्री',
+ tn:'नीचे दी गई सेवा की शर्तें पूरी तरह अंग्रेज़ी में हैं, जो कानूनी रूप से बाध्यकारी संस्करण है।',
+ mt:'हमारा मिशन',
+ mp:'हम, EduPulse, ने StudySync को दो बड़ी समस्याएँ हल करने के लिए बनाया है। पहली, निजी स्कूलों और कई विश्वविद्यालयों में, जहाँ डिवाइस का उपयोग सीखने का अहम हिस्सा है, AI का अक्सर दुरुपयोग होता है और वह असाइनमेंट में नकल, परीक्षा में अनुचित तरीकों आदि के काम आता है। दूसरी, कम आय वाले परिवारों के लोगों को अक्सर शिक्षा तक उचित पहुँच नहीं मिलती, जिससे आर्थिक रूप से सम्पन्न लोगों को पढ़ाई में सफल होने में बढ़त मिल जाती है। हम कम आय और अधिक आय वाले परिवारों के बच्चों के बीच इस अंतर को मिटाना चाहते हैं।',
+ tm:'हमारी टीम से मिलें',
+ r1:'संस्थापक। Creao AI पर मुख्य AI चैटबॉट, VR हेडसेट बनाने और मूल विचार सोचने के लिए ज़िम्मेदार।',
+ r2:'हमारे VR वातावरण बनाने, हमारी डिजिटल सेवाओं का वित्तीय विश्लेषण करने और VR हेडसेट के कई संस्करण बनाने के लिए ज़िम्मेदार।',
+ r3:'करियर काउंसलर और स्टडी प्लानर जैसी सुविधाओं का विचार देने के लिए ज़िम्मेदार। मुख्य StudySync वेबसाइट, VR हब, करियर काउंसलर वेबसाइट और Ledger स्टडी प्लानर के डेवलपर।',
+ r4:'प्रोसेस जर्नल, सहानुभूति चरण, HMW वर्कशीट, CBL डिज़ाइन थिंकिंग प्रक्रिया, आँकड़े जुटाने के लिए सर्वेक्षण करने और शोध के लिए ज़िम्मेदार। हमारी शीट्स में भी प्रमुख योगदान।',
+ r5:'Vehan के साथ सर्वेक्षण करने के लिए ज़िम्मेदार। विषय पर गहन शोध किया और Eashan के साथ विचार को आकार देने में मदद की।',
+ vt:'VR हेडसेट ऐडऑन',
+ vl:'सीखने को और अधिक इंटरैक्टिव बनाने के लिए EduPulse ने तीन मुख्य मॉडलों में VR हेडसेट ऐडऑन बनाने का निर्णय लिया है।',
+ d1:'इसमें कार्डबोर्ड का ढाँचा, इनपुट बनाने के लिए नियोडिमियम रिंग मैग्नेट और सिरेमिक डिस्क मैग्नेट, हेडस्ट्रैप, और शानदार 3D अनुभव के लिए द्विउत्तल लेंस (25\u00a0मिमी व्यास, 45\u00a0मिमी फोकल लंबाई) हैं।',
+ d2:'इसमें एडजस्टेबल ऑप्टिक लेंस के साथ पॉलीकार्बोनेट बॉडी शेल, प्रीमियम हेडस्ट्रैप और अधिक आरामदायक सीखने के लिए फेस कुशनिंग है। इसमें लॉकिंग मैकेनिज़्म है और एक समय में 2 इनपुट लिए जा सकते हैं।',
+ d3:'इसकी अपनी स्क्रीन, एनालॉग स्टिक के साथ 5 इनपुट तक सपोर्ट करने वाले दो कंट्रोलर, फेस कुशनिंग, प्रीमियम ऑप्टिक लेंस और सीखने में डुबो देने वाला ऑडियो सिस्टम है। इसमें उन्नत कूलिंग और थर्मल यूनिट, अधिकतम टिकाऊपन के लिए मज़बूत पॉलीकार्बोनेट और पॉलिएमाइड ढाँचा, काफ़ी लंबी बैटरी लाइफ़ और 60\u00a0Hz से 90\u00a0Hz स्क्रीन में अपग्रेड है।',
+ pc:'कीमत बाज़ार की स्थिति पर निर्भर करती है',pf:'शुरुआत',pu:'अधिकतम',bv:'(बेसिक संस्करण)',i8:'(8 इनपुट)'},
+ur:{n:['مین اے آئی ٹرمینل','لیجر','کیریئر کونسلر','وی آر حب'],loc:'مقام',en:'انگریزی میں تبدیل کریں',pr:'قیمتیں',sc:'نجی اسکولوں کے لیے',ng:'این جی اوز کے لیے',sp:'واحد پیکیج',cu:'حسبِ ضرورت پلان',ps:'فی طالب علم',pm:'ماہانہ',soon:'جلد آ رہا ہے',si:'سنک کے لیے گوگل سے سائن اِن کریں',so:'سائن آؤٹ',tt:'شرائطِ خدمت',ppn:'رازداری کی پالیسی',ac:'میں شرائطِ خدمت قبول کرتا/کرتی ہوں',ok:'قبول کریں اور آگے بڑھیں',no:'منسوخ کریں',th:['لائٹ','ڈارک','سسٹم'],bg:'پس منظر',fg:'مواد',
+ tn:'نیچے دی گئی مکمل شرائطِ خدمت انگریزی میں ہیں، جو قانونی طور پر پابند کن ورژن ہے۔',
+ mt:'ہمارا مشن',
+ mp:'ہم، EduPulse، نے StudySync دو بڑے مسائل حل کرنے کے لیے بنایا ہے۔ پہلا، نجی اسکولوں اور کئی جامعات میں، جہاں آلات کا استعمال سیکھنے کا اہم حصہ ہے، اے آئی کا اکثر غلط استعمال ہوتا ہے اور یہ اسائنمنٹس میں نقل، امتحانات میں غیر منصفانہ طریقوں وغیرہ کے لیے استعمال ہوتا ہے۔ دوسرا، کم آمدنی والے گھرانوں کے لوگوں کو اکثر تعلیم تک مناسب رسائی نہیں ملتی، جس سے مالی طور پر خوشحال لوگوں کو تعلیمی کامیابی میں برتری مل جاتی ہے۔ ہم کم آمدنی اور زیادہ آمدنی والے گھرانوں کے بچوں کے درمیان اس فرق کو ختم کرنا چاہتے ہیں۔',
+ tm:'ہماری ٹیم سے ملیں',
+ r1:'بانی۔ Creao AI پر مین اے آئی چیٹ بوٹ، وی آر ہیڈسیٹ بنانے اور بنیادی آئیڈیا سوچنے کے ذمہ دار۔',
+ r2:'ہمارے وی آر ماحول بنانے، ہماری ڈیجیٹل خدمات کی مالیاتی تفصیل تیار کرنے اور وی آر ہیڈسیٹ کے متعدد ورژن بنانے کے ذمہ دار۔',
+ r3:'کیریئر کونسلر اور اسٹڈی پلانر جیسی خصوصیات کا آئیڈیا دینے کے ذمہ دار۔ مین StudySync ویب سائٹ، وی آر حب، کیریئر کونسلر ویب سائٹ اور Ledger اسٹڈی پلانر کے ڈیولپر۔',
+ r4:'پروسیس جرنل، ہمدردی کے مرحلے، HMW ورک شیٹ، CBL ڈیزائن تھنکنگ کے عمل، اعداد و شمار جمع کرنے کے لیے سروے کرنے اور تحقیق کے ذمہ دار۔ ہماری شیٹس میں بھی اہم حصہ۔',
+ r5:'Vehan کے ساتھ سروے کرنے کے ذمہ دار۔ موضوع پر گہری تحقیق کی اور Eashan کے ساتھ آئیڈیا کو شکل دینے میں مدد کی۔',
+ vt:'وی آر ہیڈسیٹ ایڈ آنز',
+ vl:'سیکھنے کو کہیں زیادہ انٹرایکٹو بنانے کے لیے EduPulse نے تین بنیادی ماڈلز میں وی آر ہیڈسیٹ ایڈ آنز بنانے کا فیصلہ کیا ہے۔',
+ d1:'اس میں گتے کا ڈھانچہ، ان پٹ بنانے کے لیے نیوڈیمیم رنگ میگنیٹ اور سیرامک ڈسک میگنیٹ، ہیڈ اسٹریپ اور شاندار تھری ڈی تجربے کے لیے دو رخی محدب عدسے (25\u00a0ملی میٹر قطر، 45\u00a0ملی میٹر فوکل لمبائی) شامل ہیں۔',
+ d2:'اس میں ایڈجسٹ ایبل آپٹک لینز کے ساتھ پولی کاربونیٹ باڈی شیل، پریمیم ہیڈ اسٹریپ اور زیادہ آرام دہ سیکھنے کے لیے چہرے کی کُشننگ شامل ہے۔ اس میں لاکنگ میکانزم ہے اور بیک وقت 2 ان پٹ لیے جا سکتے ہیں۔',
+ d3:'اس کی اپنی اسکرین، اینالاگ اسٹکس کے ساتھ 5 ان پٹ تک سپورٹ کرنے والے دو کنٹرولر، چہرے کی کُشننگ، پریمیم آپٹک لینز اور سیکھنے میں مگن کرنے والا آڈیو سسٹم ہے۔ اس میں اعلیٰ کولنگ اور تھرمل یونٹ، زیادہ پائیداری کے لیے مضبوط پولی کاربونیٹ اور پولی امائیڈ ڈھانچہ، کہیں زیادہ بیٹری لائف اور 60\u00a0ہرٹز سے 90\u00a0ہرٹز اسکرین تک اپ گریڈ ہے۔',
+ pc:'قیمت مارکیٹ کے حالات پر منحصر ہے',pf:'شروع',pu:'زیادہ سے زیادہ',bv:'(بنیادی ورژن)',i8:'(8 ان پٹ)'},
+ar:{n:['المحطة الرئيسية للذكاء الاصطناعي','السجل','مستشار المهن','مركز الواقع الافتراضي'],loc:'الموقع',en:'التبديل إلى الإنجليزية',pr:'الأسعار',sc:'للمدارس الخاصة',ng:'للمنظمات غير الربحية',sp:'باقة فردية',cu:'خطة مخصصة',ps:'للطالب',pm:'شهريًا',soon:'قريبًا',si:'سجّل الدخول عبر Google للمزامنة',so:'تسجيل الخروج',tt:'شروط الخدمة',ppn:'سياسة الخصوصية',ac:'أوافق على شروط الخدمة',ok:'موافقة ومتابعة',no:'إلغاء',th:['فاتح','داكن','النظام'],bg:'الخلفية',fg:'المحتوى',
+ tn:'النص الكامل لشروط الخدمة أدناه متوفر بالإنجليزية فقط، وهي النسخة الملزمة قانونيًا.',
+ mt:'مهمتنا',
+ mp:'نحن في EduPulse طوّرنا StudySync لحل مشكلتين كبيرتين. أولًا، في المدارس الخاصة والعديد من الجامعات التي يُعدّ استخدام الأجهزة جزءًا أساسيًا من بيئة التعلم فيها، يُساء استخدام الذكاء الاصطناعي كثيرًا ويُستخدم أحيانًا للغش في الواجبات واتباع وسائل غير عادلة أثناء الاختبارات وغيرها. ثانيًا، كثيرًا ما لا تحصل الأسر ذات الدخل المنخفض على فرصة مناسبة للتعليم، مما يمنح الميسورين ماديًا أفضلية في النجاح الأكاديمي. نريد سدّ هذه الفجوة بين أطفال الأسر ذات الدخل المنخفض وأطفال الأسر ذات الدخل المرتفع.',
+ tm:'تعرّف على الفريق',
+ r1:'المؤسس. مسؤول عن إنشاء روبوت الدردشة الرئيسي بالذكاء الاصطناعي على Creao AI، ونظارة الواقع الافتراضي، وعن ابتكار الفكرة.',
+ r2:'مسؤول عن إنشاء بيئات الواقع الافتراضي لدينا، والتحليل المالي لخدماتنا الرقمية، وتصميم نسخ متعددة من نظارات الواقع الافتراضي.',
+ r3:'مسؤول عن فكرة ميزات مثل مستشار المهن ومخطط الدراسة. مطوّر موقع StudySync الرئيسي، ومركز الواقع الافتراضي، وموقع مستشار المهن، ومخطط الدراسة Ledger.',
+ r4:'مسؤول عن سجل العملية، ومرحلة التعاطف، وورقة HMW، وعملية التفكير التصميمي CBL، وإجراء استبيان لجمع الإحصاءات، والبحث. كما ساهم بشكل كبير في جداولنا.',
+ r5:'مسؤول عن إجراء الاستبيان مع Vehan. أجرى بحثًا معمقًا حول الموضوع وساعد في صياغة الفكرة مع Eashan.',
+ vt:'ملحقات نظارات الواقع الافتراضي',
+ vl:'لجعل التعلم أكثر تفاعلية، قررت EduPulse إنشاء ملحقات لنظارات الواقع الافتراضي بثلاثة طرازات رئيسية.',
+ d1:'هيكل من الكرتون، ومغناطيس حلقي من النيوديميوم ومغناطيس قرصي من السيراميك لتشكيل أداة إدخال، وشريط للرأس، وعدسات محدبة الوجهين (قطر 25\u00a0مم، بعد بؤري 45\u00a0مم) لتجربة ثلاثية الأبعاد رائعة.',
+ d2:'هيكل من البولي كربونات مع عدسات بصرية قابلة للتعديل، وشريط رأس فاخر، وحشوة للوجه لتعلّم أكثر راحة. يتميز بآلية قفل ويدعم إدخالين في الوقت نفسه.',
+ d3:'شاشة خاصة، ووحدتا تحكم تدعمان حتى 5 مدخلات إلى جانب عصي تناظرية، وحشوة للوجه، وعدسات بصرية فاخرة، ونظام صوتي يغمر المستخدم في التعلم. يضم وحدة تبريد وإدارة حرارية متقدمة، وهيكلًا متينًا من البولي كربونات والبولي أميد لأقصى متانة، وعمر بطارية أطول بكثير، وترقية من شاشة 60\u00a0هرتز إلى 90\u00a0هرتز.',
+ pc:'يعتمد السعر على ظروف السوق',pf:'ابتداءً من',pu:'حتى',bv:'(النسخة الأساسية)',i8:'(8 مدخلات)'},
+ta:{n:['முதன்மை AI முனையம்','பேரேடு','தொழில் ஆலோசகர்','VR மையம்'],loc:'இடம்',en:'ஆங்கிலத்திற்கு மாற்று',pr:'விலை',sc:'தனியார் பள்ளிகளுக்கு',ng:'தன்னார்வ அமைப்புகளுக்கு',sp:'தனிப் பொதி',cu:'தனிப்பயன் திட்டம்',ps:'ஒரு மாணவருக்கு',pm:'மாதம்',soon:'விரைவில்',si:'ஒத்திசைக்க Google மூலம் உள்நுழையவும்',so:'வெளியேறு',tt:'சேவை விதிமுறைகள்',ppn:'தனியுரிமைக் கொள்கை',ac:'சேவை விதிமுறைகளை ஏற்கிறேன்',ok:'ஏற்று தொடரவும்',no:'ரத்து செய்',th:['ஒளி','இருள்','கணினி'],bg:'பின்னணி',fg:'உள்ளடக்கம்',
+ tn:'கீழே உள்ள முழு சேவை விதிமுறைகள் ஆங்கிலத்தில் உள்ளன; அதுவே சட்டப்படி கட்டுப்படுத்தும் பதிப்பு.',
+ mt:'எங்கள் நோக்கம்',
+ mp:'நாங்கள், EduPulse, இரண்டு முக்கிய பிரச்சினைகளைத் தீர்க்க StudySync-ஐ உருவாக்கினோம். முதலாவதாக, சாதனப் பயன்பாடு கற்றலின் முக்கிய அங்கமாக இருக்கும் தனியார் பள்ளிகளிலும் பல பல்கலைக்கழகங்களிலும் AI தவறாகப் பயன்படுத்தப்படுகிறது; பணிகளில் ஏமாற்றுவதற்கும் தேர்வுகளில் நியாயமற்ற வழிகளுக்கும் அது பயன்படுகிறது. இரண்டாவதாக, குறைந்த வருமானக் குடும்பங்களைச் சேர்ந்தவர்களுக்கு கல்வி சரியாகக் கிடைப்பதில்லை; இதனால் பொருளாதார ரீதியாக வசதியானவர்களுக்கு கல்வியில் வெற்றி பெற அதிக வாய்ப்பு கிடைக்கிறது. குறைந்த வருமானக் குடும்பங்களின் குழந்தைகளுக்கும் அதிக வருமானக் குடும்பங்களின் குழந்தைகளுக்கும் இடையிலான இந்த இடைவெளியை நீக்க விரும்புகிறோம்.',
+ tm:'எங்கள் குழுவைச் சந்தியுங்கள்',
+ r1:'நிறுவனர். Creao AI-இல் முதன்மை AI சாட்போட், VR ஹெட்செட் ஆகியவற்றை உருவாக்குவதற்கும் மூல யோசனையை உருவாக்குவதற்கும் பொறுப்பு.',
+ r2:'எங்கள் VR சூழல்களை உருவாக்குவது, எங்கள் டிஜிட்டல் சேவைகளின் நிதி விவரப் பிரிப்பு, VR ஹெட்செட்டின் பல பதிப்புகளை உருவாக்குவது ஆகியவற்றுக்குப் பொறுப்பு.',
+ r3:'தொழில் ஆலோசகர், படிப்புத் திட்டமிடுபவர் போன்ற அம்சங்களின் யோசனைக்குப் பொறுப்பு. முதன்மை StudySync இணையதளம், VR மையம், தொழில் ஆலோசகர் இணையதளம், Ledger படிப்புத் திட்டமிடுபவர் ஆகியவற்றின் டெவலப்பர்.',
+ r4:'செயல்முறை நாட்குறிப்பு, பச்சாதாப நிலை, HMW பணித்தாள், CBL வடிவமைப்புச் சிந்தனை செயல்முறை, புள்ளிவிவரங்களைச் சேகரிக்க ஆய்வு நடத்துதல், ஆராய்ச்சி ஆகியவற்றுக்குப் பொறுப்பு. எங்கள் தாள்களிலும் முக்கியப் பங்களிப்பு.',
+ r5:'Vehan உடன் இணைந்து ஆய்வை நடத்துவதற்குப் பொறுப்பு. தலைப்பில் ஆழமான ஆராய்ச்சி செய்து, Eashan உடன் இணைந்து யோசனையை வடிவமைக்க உதவினார்.',
+ vt:'VR ஹெட்செட் கூடுதல் சாதனங்கள்',
+ vl:'கற்றலை மிகவும் ஊடாடும் வகையில் மாற்ற, EduPulse மூன்று முக்கிய மாடல்களில் VR ஹெட்செட் கூடுதல் சாதனங்களை உருவாக்க முடிவு செய்துள்ளது.',
+ d1:'அட்டைக் கட்டமைப்பு, உள்ளீட்டை உருவாக்க நியோடிமியம் வளைய காந்தமும் பீங்கான் வட்டக் காந்தமும், தலைப்பட்டை, சிறந்த 3D அனுபவத்துக்கு இருபுறக் குவி லென்ஸ்கள் (25\u00a0மிமீ விட்டம், 45\u00a0மிமீ குவிய நீளம்) ஆகியவை உள்ளன.',
+ d2:'சரிசெய்யக்கூடிய ஒளியியல் லென்ஸ்களுடன் பாலிகார்பனேட் உடல் கூடு, உயர்தரத் தலைப்பட்டை, மேலும் வசதியான கற்றலுக்கான முகத் தலையணை ஆகியவை உள்ளன. பூட்டும் அமைப்பு உண்டு; ஒரே நேரத்தில் 2 உள்ளீடுகளை எடுக்கலாம்.',
+ d3:'தனக்கென திரை, அனலாக் குச்சிகளுடன் 5 உள்ளீடுகள் வரை ஆதரிக்கும் இரண்டு கட்டுப்படுத்திகள், முகத் தலையணை, உயர்தர ஒளியியல் லென்ஸ்கள், கற்றலில் மூழ்கடிக்கும் ஒலி அமைப்பு ஆகியவை உள்ளன. சிறந்த குளிர்விப்பு மற்றும் வெப்ப அலகு, அதிக நீடித்துழைப்புக்கான பாலிகார்பனேட் மற்றும் பாலிஅமைடு கட்டமைப்பு, மிக நீண்ட மின்கல ஆயுள், 60\u00a0Hz திரையிலிருந்து 90\u00a0Hz திரைக்கு மேம்பாடு ஆகியவையும் உள்ளன.',
+ pc:'விலை சந்தை நிலவரத்தைப் பொறுத்தது',pf:'தொடக்கம்',pu:'அதிகபட்சம்',bv:'(அடிப்படை பதிப்பு)',i8:'(8 உள்ளீடுகள்)'}
 };
-const NAMES={en:'English',fr:'Français',es:'Español',ru:'Русский',hi:'हिन்दी'.replace('ந்','ந'),ur:'اردو',ar:'العربية',ta:'தமிழ்'};
-NAMES.hi='हिन्दी';
+const NAMES={en:'English',fr:'Français',es:'Español',ru:'Русский',hi:'हिन्दी',ur:'اردو',ar:'العربية',ta:'தமிழ்'};
 const RTL=['ar','ur'];
 const TZ={'Asia/Dubai':'AE','Asia/Muscat':'OM','Asia/Riyadh':'SA','Asia/Qatar':'QA','Asia/Kuwait':'KW','Asia/Bahrain':'BH','Asia/Baghdad':'IQ','Asia/Amman':'JO','Asia/Beirut':'LB','Africa/Cairo':'EG','Africa/Casablanca':'MA','Africa/Algiers':'DZ','Africa/Tunis':'TN',
 'Asia/Kolkata':'IN','Asia/Calcutta':'IN','Asia/Karachi':'PK','Asia/Colombo':'LK','Europe/Moscow':'RU','Asia/Yekaterinburg':'RU','Asia/Novosibirsk':'RU','Asia/Vladivostok':'RU','Europe/Minsk':'BY',
@@ -194,17 +315,19 @@ function render(){
   $('lang').innerHTML=Object.keys(T).map(k=>`<option value="${k}"${k===lang?' selected':''}>${NAMES[k]}</option>`).join('');
   $('modes').innerHTML=['light','dark','system'].map((m,i)=>`<button data-m="${m}" aria-pressed="${mode===m}">${t.th[i]}</button>`).join('');
   $('lbBg').textContent=t.bg;$('lbFg').textContent=t.fg;
+  /* every element tagged data-t gets its text from the active language */
   document.querySelectorAll('[data-t]').forEach(e=>e.textContent=t[e.dataset.t]);
+  ['pf','pu','bv','i8'].forEach(k=>$(k).textContent=t[k]);
   const plans=[[t.sc,5,t.ps],[t.ng,3,t.ps],[t.sp,7,t.pm]];
   $('plans').innerHTML=plans.map(([n,p,u])=>`<div class="plan"><h3>${n}</h3><div class="aed">${aedFmt(p)}</div><div class="u">${u}</div><div class="x"><span>${money(p,'INR')}</span><span>${money(p,'USD')}</span></div></div>`).join('')
     +`<div class="plan soon"><h3>${t.cu}</h3><div class="aed">—</div><div class="u">${t.soon}</div></div>`;
   $('sign').textContent=user?`${t.so} (${user.name})`:t.si;
   $('pp').textContent=t.ppn;$('pp').href=PRIVACY_URL;
   $('tosH').textContent=t.tt;$('terms').innerHTML=TERMS_HTML;$('chkT').textContent=t.ac;
+  $('tnote').textContent=t.tn;$('tnote').style.display=t.tn?'':'none';
   $('tosOk').textContent=t.ok;$('tosNo').textContent=t.no;
 }
 
-/* ---- Theme ---- */
 let mode=store.get('ss_mode')||'system';
 const prefDark=matchMedia('(prefers-color-scheme: dark)').matches;
 const BGS=['#fdf6e3','#e8f1ff','#e9f5ec','#fde8ef','#14213d','#1f1f2e'];
@@ -226,11 +349,9 @@ $('modes').addEventListener('click',e=>{const m=e.target.dataset.m;if(m){mode=m;
 $('swBg').addEventListener('click',e=>{const c=e.target.dataset.c;if(c){cBg=c;store.set('ss_bg',c);applyTheme()}});
 $('swFg').addEventListener('click',e=>{const c=e.target.dataset.c;if(c){cFg=c;store.set('ss_fg',c);applyTheme()}});
 
-/* ---- Language ---- */
 $('lang').addEventListener('change',e=>{lang=e.target.value;store.set('ss_lang',lang);render();applyTheme()});
 $('toEn').addEventListener('click',()=>{lang='en';store.set('ss_lang',lang);render();applyTheme()});
 
-/* ---- Google sign-in (placeholder) ---- */
 let user=null,accepted=store.get('ss_tos')==='1';
 try{user=JSON.parse(store.get('ss_user')||'null')}catch(e){}
 /* Replace this with real Google Identity Services once you host the page on your own domain
